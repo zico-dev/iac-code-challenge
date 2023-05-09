@@ -1,0 +1,27 @@
+pipeline {
+    agent any 
+}
+
+    stages('Terraform fmt') {
+        steps {
+            sh 'terraform fmt' 
+        }
+    }
+
+    stages('Terraform Validate') {
+        steps {
+            sh 'terraform validate' 
+        }
+    }
+
+    stages('Terraform plan') {
+        steps {
+            sh 'terraform plan' 
+        }
+    }
+
+    stages('Terraform apply') {
+        steps {
+            sh 'terraform apply' 
+        }
+    }
